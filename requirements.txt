@@ -1,9 +1,10 @@
 streamlit==1.6.0
 
+numpy==1.18.5
 pandas
 matplotlib
 lunarcalendar
 
 jupyter-client
-fbprophet
+fbprophet==0.7.1
 botocore
