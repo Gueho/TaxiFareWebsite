@@ -26,18 +26,18 @@ pickup_address = st.text_input('pickup address', value = 'Central Park')
 dropoff_address = st.text_input('dropoff address', value = 'JFK')
 passenger_count = st.number_input('passenger count', min_value = 1, max_value = 8)
 
-if st.button('Calculate'):
-    pickuploc_params = {
-        'q': pickup_address,
-        'format': 'json'
+
+pickuploc_params = {
+    'q': pickup_address,
+    'format': 'json'
+}
+dropoffloc_params = {
+    'q': dropoff_address,
+    'format': 'json'
     }
-    dropoffloc_params = {
-        'q': dropoff_address,
-        'format': 'json'
-    }
-    geo_url = "https://nominatim.openstreetmap.org"
-    pickup_response = requests.get(geo_url, params = pickuploc_params).json()
-    dropoff_response = requests.get(geo_url, params = dropoffloc_params).json()
+geo_url = "https://nominatim.openstreetmap.org"
+pickup_response = requests.get(geo_url, params = pickuploc_params).json()
+dropoff_response = requests.get(geo_url, params = dropoffloc_params).json()
 
 
 pickup_latitude = float(pickup_response[0]['lat'])
