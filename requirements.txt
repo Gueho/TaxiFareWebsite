@@ -1,0 +1,15 @@
+streamlit
+python
+datetime
+
+requests
+pandas
+matplotlib
+lunarcalendar
+
+jupyter-client
+fbprophet
+botocore
+
+simpletaxifare
+setuptools
