@@ -57,7 +57,7 @@ loc_df = pd.DataFrame.from_dict(loc_dict)
 
 pickup_loc = loc_df.iloc[[0]]
 dropoff_loc = loc_df.iloc[[1]]
-st.map(loc_df)
+
 
 
 # '''
@@ -96,3 +96,4 @@ response = requests.get(url, params = params).json()
 # '''
 fare = round(response['fare'], 2)
 st.metric('Expected:', f'{fare}$', delta=None, delta_color="normal")
+st.map(loc_df)
