@@ -1,8 +1,5 @@
-streamlit
-python
-datetime
+streamlit==1.6.0
 
-requests
 pandas
 matplotlib
 lunarcalendar
@@ -10,6 +7,3 @@ lunarcalendar
 jupyter-client
 fbprophet
 botocore
-
-simpletaxifare
-setuptools
